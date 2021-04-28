@@ -1,0 +1,43 @@
+.hero-wrapper {
+    height: 100vh;
+    width: 100%;
+    background-image: url(/images/pictures_of_me/cutoutpicPNG.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-wrapper h1 {
+    font-size: 72px;
+    font-weight: 400;
+    
+
+}
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    
+    margin-left: 5%;
+}
+.social-icons::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 150px;
+    top: -165px;
+    left: 45%;
+    background-color: white;
+}
+.social-icons::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 150px;
+    top: 79px;
+    left: 45%;
+    background-color: white;
+}
