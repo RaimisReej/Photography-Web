@@ -9,8 +9,14 @@
 .hero-wrapper h1 {
     font-size: 72px;
     font-weight: 400;
-    
-
+    margin-left: 5%;
+}
+.hero-title {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    position: absolute;
+    bottom: 10vh;
 }
 .social-icons {
     display: flex;
@@ -18,7 +24,6 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%);
-    
     margin-left: 5%;
 }
 .social-icons::before {

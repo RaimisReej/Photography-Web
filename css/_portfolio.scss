@@ -1,0 +1,40 @@
+.portfolio-container {
+    width: 100%;
+    height: auto;
+}
+.portfolio-grid {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.column {
+    flex: 50%;
+    max-width: 50%;
+}
+.column:nth-child(1) {
+    padding-right: 8px;
+}
+.column img {
+    vertical-align: middle;
+    width: 100%;
+    margin-top: 8px;
+}
+.see-more-container {
+    width: 90%;
+    margin: auto;
+    padding: 3rem 0;
+}
+.portfolio-ui {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+  
+  }
+h2 {
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: 30px;
+}

@@ -1,0 +1,23 @@
+.banner-wrapper {
+    height: 250px;
+    width: 100%;
+    position: relative;
+    background: url(/images/banner.jpg) no-repeat center/cover;
+}
+.inner-wrapper {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    h6 {
+      font-size: 24px; 
+      font-weight: 500; 
+      text-transform: capitalize;
+    }
+    h5 {
+        font-size: 36px;
+        font-weight: 600; 
+        text-transform: capitalize;
+    }
+}
