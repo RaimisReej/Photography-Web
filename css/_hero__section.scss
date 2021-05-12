@@ -10,6 +10,10 @@
     font-size: 72px;
     font-weight: 400;
     margin-left: 5%;
+    transition: transform .3s ease-in-out;
+}
+.hero-wrapper h1 > span:hover {
+    transform: scale(1.5);
 }
 .hero-title {
     width: 100%;
