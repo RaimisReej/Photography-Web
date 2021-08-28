@@ -1,11 +1,16 @@
 .about-section {
     width: 100%;
     padding-bottom: 2rem;
+    position: relative;
+    background: url(../images/pictures_of_me/IMG_7966-2.jpg);
+    background-size: cover;
+    
 }
+
 .about-inner {
     width: 90%;
     margin: auto;
-    margin-top: 3rem;
+    padding-top: 2rem;
     display: flex;
 }
 .about-text {
@@ -20,12 +25,7 @@
         font-size: 24px;
     }
 }
-// .about-pictures img {
-//     width: 100%;
-// }
-// .transform-img {
-//     transform: translate(-20px, -60px);
-// }
+
 .about-pictures {
     display: none;
 }
