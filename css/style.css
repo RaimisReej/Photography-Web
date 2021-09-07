@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+:root {
+  --h1: 64px;
+  --h2: 56px;
+  --h3: 48px;
+  --h4: 40px;
+  --h5: 32px;
+  --p1: 24px;
+  --p2: 16px;
+  --fw-m: 500;
+  --fw-sb: 600;
+  --fw-b: 700;
+  --shadow-color: #131313;
+  --white: #fff;
+  --black: #000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -24,9 +40,37 @@ ul li {
   list-style: none;
 }
 
+h1 {
+  font-size: var(--h1);
+  font-weight: var(--fw-m);
+}
+
+h2 {
+  font-size: var(--h2);
+  font-weight: var(--fw-m);
+}
+
+h3 {
+  font-size: var(--h3);
+  font-weight: var(--fw-m);
+}
+
+h4 {
+  font-size: var(--h4);
+  font-weight: var(--fw-m);
+}
+
+h5 {
+  font-size: var(--h5);
+  font-weight: var(--fw-m);
+}
+
+a, p {
+  font-size: var(--p1);
+}
+
 header {
   width: 100%;
-  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,6 +97,11 @@ header {
           flex: 1;
 }
 
+.logo {
+  font-size: var(--h2);
+  font-weight: var(--fw-m);
+}
+
 nav {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -72,7 +121,6 @@ nav ul {
 }
 
 nav a {
-  font-size: 24px;
   padding-bottom: 1px;
 }
 
@@ -83,7 +131,6 @@ nav a {
 .link-hover::before {
   content: '';
   width: 100%;
-  height: 1px;
   bottom: 0;
   left: 0;
   border-bottom: 1px solid white;
@@ -105,20 +152,6 @@ nav a {
           transform-origin: left;
 }
 
-.logo {
-  font-size: 48px;
-  font-weight: 500;
-}
-
-@media (max-width: 910px) {
-  nav a {
-    font-size: 1.2rem;
-  }
-  .logo {
-    font-size: 2rem;
-  }
-}
-
 .hero-wrapper {
   height: 100vh;
   width: 100%;
@@ -129,18 +162,7 @@ nav a {
 }
 
 .hero-wrapper h1 {
-  font-size: 72px;
-  font-weight: 400;
   margin-left: 5%;
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
-}
-
-.hero-wrapper h1 > span:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
 }
 
 .hero-title {
@@ -211,15 +233,7 @@ nav a {
           align-items: center;
 }
 
-.inner-wrapper h6 {
-  font-size: 24px;
-  font-weight: 500;
-  text-transform: capitalize;
-}
-
-.inner-wrapper h5 {
-  font-size: 36px;
-  font-weight: 600;
+.inner-wrapper p {
   text-transform: capitalize;
 }
 
@@ -300,12 +314,6 @@ nav a {
   margin: auto;
 }
 
-h2 {
-  font-size: 64px;
-  font-weight: 600;
-  letter-spacing: 30px;
-}
-
 .about-section {
   width: 100%;
   padding-bottom: 2rem;
@@ -341,10 +349,6 @@ h2 {
   text-align: center;
 }
 
-.about-text p {
-  font-size: 24px;
-}
-
 .about-pictures {
   display: none;
 }
@@ -353,16 +357,6 @@ h2 {
   width: 100%;
   height: 300px;
   background: #111;
-}
-
-.main-footer a, .main-footer p {
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.main-footer h5 {
-  font-size: 1.3rem;
-  font-weight: 500;
 }
 
 .footer-inner {
