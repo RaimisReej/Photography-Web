@@ -1,4 +1,4 @@
-header {
+.header-wrapper {
     width: 100%;
     display: flex;
 }
@@ -41,7 +41,6 @@ nav a {
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 200ms ease-in;
-   
   }
   .link-hover:hover::before {
     transform: scaleX(1);
