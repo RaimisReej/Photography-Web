@@ -2,185 +2,72 @@
     padding: 1rem 0;
     height: 117px;
 }
-
-:root {
-    --black: blue;
-    --white: red;
-    --gray: green;
-
-    --text-arrow-space: 16px;
-    --shaft-width: 1px;
-    --newshaft-width: 64px;
-    --shaft-thickness: 1px;
-    --arrow-head-width: 8px;
-    --arrow-head-thickness: $shaft-thickness;
+.arrow-wrapper {
+    display: flex;
+    align-items: center;
 }
-.the-arrow {
-    width: var(--shaft-width);
-    transition: all 0.2s;
-   
-    &.-left {
-      position: absolute;
-      top: 60%;
-      left: 0;
+
+  #arrow_1 .arrow {
+    $size: 30px;
+    $width: 1px;
   
-       .shaft {
-        width: 0;
-        background-color: var(--black);
-        
-        &:before,
-        &:after {
-          width: 0;
-          background-color: var(--black);
-        }
-  
-        &:before {
-          transform: rotate(0);
-        }
-  
-        &:after {
-          transform: rotate(0);
-        }
-      }
-    }
-    
-    &.-right {
-      top: 3px;
-      
-       .shaft {
-        width: var(--shaft-width);
-        transition-delay: 0.2s;
-  
-        &:before,
-        &:after { 
-          width: var(--arrow-head-width);
-          transition-delay: 0.3s;
-          transition: all 0.5s;
-        }
-        
-        &:before {
-          transform: rotate(40deg);
-        }
-        
-        &:after {
-          transform: rotate(-40deg);
-        }
-      }
-    }
-  
-     .shaft {
-      background-color: var(--black);
-      display: block;
-      height: var(--shaft-thickness);
-      position: relative;
-      transition: all 0.2s;
-      transition-delay: 0;
-      will-change: transform;
-  
-      &:before,
-      &:after {
-        background-color: var(--black);
-        content: '';
-        display: block;
-        height: var(--arrow-head-thickness);
-        position: absolute;
-        top: 0;
-        right: 0;
-        transition: all 0.2s;
-        transition-delay: 0;
-      }
-  
-      &:before {
-        transform-origin: top right;
-      }
-  
-      &:after {
-        transform-origin: bottom right;
-      }
-    }
-  }
-  
-  
-  
-  // Animated Arrow Button
-  
-  .animated-arrow {
-    display: inline-block;
-    color: var(--black);
-    font-size: 1.25em;
-    font-style: italic;
-    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    width: $size / 1.414;
+    height: $size / 1.414 * 2;
     position: relative;
-    transition: all 0.2s;
     
-    &:hover {
-      color:  var(--gray);
+    & span,
+    &:before,
+    &:after {
+      background: #fff;
+      content: '';
+      display: block;
+      width: $size;
+      height: $width;
+      position: absolute;
+      top: calc(50% - (#{$width} / 2));
+    }
       
-       .the-arrow.-left {
-         .shaft {
-          width: var(--newshaft-width);
-          transition-delay: 0.1s;
-          background-color: var(--gray);
+    &:before {
+      transform: rotate(-45deg);
+    }
+    &:after {
+      transform: rotate(45deg);
+    }
+    
+    & span {
+      width: 0;
+    }
+    &:hover span {
+      width: $size * 1.414;
+    }
+    
+    @each $direction in 'left' 'right' {
+      &.arrow--#{$direction} {
+        & span,
+        &:before,
+        &:after {
+          #{$direction}: 0;
+          transform-origin: #{$direction} 50%;
+        }
   
+        &:before,
+        &:after {
+          transition: #{$direction} 0.3s 0.05s;
+        }
+  
+        & span {
+          transition: width 0.3s, #{$direction} 0.3s 0.05s;
+        }
+  
+        &:hover {
+          & span,
           &:before,
           &:after {
-            width: var(--arrow-head-width);
-            transition-delay: 0.1s;
-            background-color: var(--gray);
-          }
-  
-          &:before {
-            transform: rotate(40deg);
-          }
-  
-          &:after {
-            transform: rotate(-40deg);
+            #{$direction}: $size / 1.414 * -1;
           }
         }
-      }
-      
-      .main {
-        transform: translateX(var(--shaft-width) + var(--text-arrow-space));
-        transform: translateX(var(--newshaft-width) + var(--text-arrow-space));
-        
-         .the-arrow.-right {
-           .shaft {
-            width: 0;
-            transform: translateX(200%);
-            transition-delay: 0;
-            
-            &:before,
-            &:after {
-              width: 0;
-              transition-delay: 0;
-              transition: all 0.1s;
-            }
-  
-            &:before {
-              transform: rotate(0);
-            }
-  
-            &:after {
-              transform: rotate(0);
-            }
-          }
-        }
-      }
-    }
-    
-     .main {
-      display: flex;
-      align-items: center;
-      transition: all 0.2s;
-      
-       .text {
-        margin: 0 var(--text-arrow-space) 0 0;
-        line-height: 1;
-      }
-      
-       .the-arrow {
-        position: relative;
       }
     }
   }
-  
