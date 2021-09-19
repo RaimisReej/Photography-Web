@@ -1,4 +1,4 @@
-.portfolio-wrapper {
+.header-wrapper {
     padding: 1rem 0;
     height: 117px;
 }
@@ -71,3 +71,26 @@
       }
     }
   }
+
+.portfolio-wrapper {
+    position: relative;
+    width: 100%;
+}
+.text-background{
+    position: absolute;
+    transform: translateY(-45%);
+    left: 0;
+    
+   
+    
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+    display: flex;
+    justify-content: space-between;
+}
+.text-background span {
+    font-size: 280px;
+    font-weight: 900;
+    color: #131313;
+}

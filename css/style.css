@@ -491,7 +491,7 @@ form {
   }
 }
 
-.portfolio-wrapper {
+.header-wrapper {
   padding: 1rem 0;
   height: 117px;
 }
@@ -579,6 +579,33 @@ form {
 
 #arrow_1 .arrow.arrow--right:hover span, #arrow_1 .arrow.arrow--right:hover:before, #arrow_1 .arrow.arrow--right:hover:after {
   right: -21.21641px;
+}
+
+.portfolio-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.text-background {
+  position: absolute;
+  -webkit-transform: translateY(-45%);
+          transform: translateY(-45%);
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.text-background span {
+  font-size: 280px;
+  font-weight: 900;
+  color: #131313;
 }
 
 /* .hero-title */
